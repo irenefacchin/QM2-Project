@@ -1,13 +1,11 @@
-#Conext and motivation
-Our idea centres around the recent trend of ‘sustainable’ fashion. Traditional models of productivity used by retailers who do not identify as sustainable has been criticised as damaging to the environment. However, our aim is to uncover if sustainable fashion brands are achieving what they claim in reducing the impact of clothing production on the environment or is simply the label of sustainability that drives their decisions on pricing and branding.
 
 
 
 
 #Suggest/sketch methods for analysis/processing of data
-Investigate potential correlation between average selling price and each stage of supply chain practices e.g. carbon footprint(statistica), sustainable cotton(statistica). This can be visualised with a scatter plot with the line of best fit. A main limitation would be the non-linear relationship between company scale and cost i.e. Economies of Scale.
-Energy use in the supply chain i.e. from acquiring cotton to clothes on the selling rack. Data will be difficult to obtain, but if possible, this can be illustrated in a sankey diagram to show energy loss along the supply chain in fast fashion brands e.g. inditex zara versus a sustainable brand e.g. pangaia, nu-in. Calculate % of energy loss to compare between different company scales.
-Increasing rate of production of clothing; fashion industry carbon footprint(need to find data) over time against time(years). Illustrated as two curves on the same distribution graph.
+Investigate potential correlation between average selling price and each stage of supply chain practices e.g. carbon footprint(statistica), sustainable cotton(statistica), visualised as a scatter plot with the line of best fit.
+Fast fashion brand versus sustainable brand energy pathway in the supply chain illustrated in a sankey diagram. Calculate % of energy loss to compare between different company scales.
+Rate of production of clothing; fashion industry carbon footprint over time against time illustrated as two curves on the same distribution graph.
 
 #Suggest/sketch methods for presenting data/results
 To present the results, we are planning on using different data visualizations in order to have a complete analysis of the subject. First of all, we will compare, in a column chart, the researched sustainable brands based on different environmental factors (CO2 emissions, water consumption, waste...). We will then rank the sustainable brands in a table. To conclude, we will analyze what would happen in the future if everyone switched to sustainable fashion. To visualize this, we will take an existing linear graph predicting the fashion industry’s environmental impact over the next 50 years, and add our predictions concerning the sustainable fashion’s environmental impact. 
