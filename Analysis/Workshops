@@ -1,9 +1,68 @@
+***Workshop 2***
+
 To import and handle .csv files --> use Pandas
 
+** Searching, extracting and plotting data**
+
+#to import pandas and pylab
+import pandas
+import pylab
+import matplotlib.pyplot as plt
+
+# to make the plots a little wider by default
+%matplotlib inline
+plt.style.use('ggplot')
+pylab.rcParams['figure.figsize'] = (10., 8.)
+
+# to read a specific column
+dataframename = pandas.read_csv (file_name, column_index = x)
+dataframename.head()
+dataframename.tail()
+
+#to read a specific row
+dataframename.loc[row_index]
+
+#to select a range of values in rows
+dataframename.loc[row_range1:row_range2]
+
+#to extract the actual value, we need to reference the column AND the row (remember, colums are referenced by their names not their index)
+dataframename [column_name].loc[row_index]
+
+#to extract look at a few rows of data we can use a range
+dataframename [column_name].loc[row_range1:row_range2]
+
+#to plot a data frame, use the plot() method and the plt. To set the labels for title and axis
+dataframename[column_name].plot()
+plt.title(“Title plot”)
+plt.xlabel(“X Label”)
+plt.ylabel(“Y Label”)
+
+--> look at documentation page for pandas
+
+**Messy Data**
+
+In .csv files, numbers are separated by commas and surrounded by quotation marks. However, there are a lot of commas within the numbers which confuses software.
+Some errors can come up: may be due to blank spaces in the text file, letters where there should be numbers, characters (“,”, “-“, etc) that shouldn’t really be there. 
+
+Cleaning data
+
+#use the “replace” method:
+clean = clean.replace(‘,’ , ‘ ’, regex = True)
+clean = clean.replace(‘-‘, ‘NaN’, regex = True).astype(‘float’)
+clean.head()
+
+Extension Regex refers to “RegularExpression” which is a way to replace and clean text. 
+We now have a clean dataframe. Let’s plot it.
+
+#plot the clean dataframe:
+clean.plot()
+plt.title(“…”)
+plt.xlabel(“…”)
+plt.ylabel(“…”)
 
 
 
-**Workshop 3: Merging and Joining Data in Python**
+***Workshop 3: Merging and Joining Data in Python***
 
 #to download the data
 !mkdir data
