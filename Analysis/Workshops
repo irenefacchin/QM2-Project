@@ -1,1 +1,32 @@
 To import and handle .csv files --> use Pandas
+
+
+
+
+**Workshop 3: Merging and Joining Data in Python**
+
+#to download the data
+!mkdir data
+
+#to join instructions
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import random
+%matplotlib inline
+plt.style.use('ggplot')
+before doing this, make sure to clean the data
+
+#merging into dataframes to add new observations
+people3 = pd.concat([people1,people2])
+
+#Clean data (I'm going to focus on one year (2012,I'm going to just look at "Both Sexes" (not focus on one gender,I'm going to get rid of a column of data (the 'Value Footnotes' column) using the drop() method.)
+cities = cities[cities['Sex']=='Both Sexes']
+cities = cities[cities['Year']==2012]
+cities.drop('Value Footnotes', axis=1, inplace=True)
+
+#recap joins, panda has four join methods
+- Left Join: use **only** keys from **left** DataFrame. SQL: [left outer join](http://goo.gl/JICveI)
+- Right Join: use **only** keys from **right** DataFrame. SQL: [right outer join](http://goo.gl/TrrHjQ)
+- Outer Join: use union of **keys from both** DataFrames. SQL: [full outer join](http://goo.gl/bVRqO8)
+- Inner Join: use **intersection of keys** from both DataFrames. SQL: [inner join](http://goo.gl/Cf1MF8)
