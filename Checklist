@@ -1,0 +1,43 @@
+#Literature Review
+
+Intro:
+·  	brief overview of topic and importance, include all definitions 
+·  	current model of manufacturing (status quo)
+·  	3 areas of environmental impact: water, GHG emissions and hazardous chemicals.
+ 
+Methodologies used in readings to understand and evaluate impact.
+ 
+Solutions suggested by the readings and evidence used to back up sustainability claims.
+ 
+Conclusion
+
+https://apparelcoalition.org/brands-retailers/
+
+#Methodologies
+
+
+#Data Analysis
+Convert into python code
+Create function forecasting consumption trends of clothing. 
+population forecast (input: population, output: quantity of t-shirts, quantity of jeans bought)
+Higg Index
+Variables:
+Consumption dependent on: age, income, 
+https://www.bls.gov/opub/btn/volume-4/pdf/consumer-expenditures-vary-by-age.pdf 
+Spending trends among age groups (multiply these by the forecasted population of each age groups)
+Purchasing power parity
+Put data into csv file, add onto Github 
+Create model:
+(Quantity of T-shirts bought in year y2020) x (water usage impact + CO2 emissions impact + chemicals impact) = ENVIRONMENTAL IMPACT SHIRTS
+(Quantity of Jeans bought in year y2020) x (water usage impact + CO2 emissions impact + chemicals impact) = ENVIRONMENTAL IMPACT JEANS
+TOTAL ENVIRONMENTAL IMPACT (in year y2020) =  ENVIRONMENTAL IMPACT SHIRTS + ENVIRONMENTAL IMPACT JEANS
+Forecast model: TOTAL ENVIRONMENTAL IMPACT each year y(2020-2050)
+Integrate function: Total impact over the years 
+
+
+#Data Visualization
+1st visualization (t-shirt and jeans graphic)
+
+Total area of shirt divided into 3 and each section is considered as 100% (status quo impact of that variable -- water, CO2 or 
+2nd visualization: Forecast model: TOTAL ENVIRONMENTAL IMPACT each year y(2020-2050)
+ 
