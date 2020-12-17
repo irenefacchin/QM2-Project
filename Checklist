@@ -17,22 +17,30 @@ https://apparelcoalition.org/brands-retailers/
 
 
 #Data Analysis
+
 Convert into python code
+
 Create function forecasting consumption trends of clothing. 
-population forecast (input: population, output: quantity of t-shirts, quantity of jeans bought)
-Higg Index
-Variables:
-Consumption dependent on: age, income, 
-https://www.bls.gov/opub/btn/volume-4/pdf/consumer-expenditures-vary-by-age.pdf 
-Spending trends among age groups (multiply these by the forecasted population of each age groups)
-Purchasing power parity
+  population forecast (input: population, output: quantity of t-shirts, quantity of jeans bought)
+  Higg Index
+  Variables:
+    Consumption dependent on: age, income, 
+    https://www.bls.gov/opub/btn/volume-4/pdf/consumer-expenditures-vary-by-age.pdf 
+    Spending trends among age groups (multiply these by the forecasted population of each age groups)
+    Purchasing power parity
+
 Put data into csv file, add onto Github 
+ Put data into csv file, add onto Github
+ Explain how you produced that data file (where did the data come from? How did you combine it?)
+ How the stats where produced 
+ Put dataset into git hub repository (csv)
+
 Create model:
-(Quantity of T-shirts bought in year y2020) x (water usage impact + CO2 emissions impact + chemicals impact) = ENVIRONMENTAL IMPACT SHIRTS
-(Quantity of Jeans bought in year y2020) x (water usage impact + CO2 emissions impact + chemicals impact) = ENVIRONMENTAL IMPACT JEANS
-TOTAL ENVIRONMENTAL IMPACT (in year y2020) =  ENVIRONMENTAL IMPACT SHIRTS + ENVIRONMENTAL IMPACT JEANS
-Forecast model: TOTAL ENVIRONMENTAL IMPACT each year y(2020-2050)
-Integrate function: Total impact over the years 
+  (Quantity of T-shirts bought in year y2020) x (water usage impact + CO2 emissions impact + chemicals impact) = ENVIRONMENTAL IMPACT SHIRTS
+  (Quantity of Jeans bought in year y2020) x (water usage impact + CO2 emissions impact + chemicals impact) = ENVIRONMENTAL IMPACT JEANS
+  TOTAL ENVIRONMENTAL IMPACT (in year y2020) =  ENVIRONMENTAL IMPACT SHIRTS + ENVIRONMENTAL IMPACT JEANS
+  Forecast model: TOTAL ENVIRONMENTAL IMPACT each year y(2020-2050)
+  Integrate function: Total impact over the years 
 
 
 #Data Visualization
