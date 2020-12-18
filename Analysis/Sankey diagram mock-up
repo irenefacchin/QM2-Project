@@ -1,0 +1,15 @@
+import plotly.graph_objects as go
+
+fig = go.Figure(go.Sankey(
+    arrangement = "snap",
+    node = {
+        "label": ["0 Fiber sourcing", "1 Textile / Fabric production", "2 Hazardous Chemical discharge", "3 Water usage", "4 Garment Production", "5 Distribution & retail", "6 unsold", "7 Consumer use","8 Landfill", "9 Recycled", "10 Textile wastage", "11 Donated"],
+        "x": [0.1, 0.2, 0.3, 0.3, 0.3, 0.5, 0.6, 0.6, 0.9, 0.7, 0.7],
+        "y": [0.1, 0.2, 0.3, 0.3, 0.3, 0.5, 0.6, 0.6, 0.9, 0.7, 0.7],
+        'pad':10},  # 10 Pixels
+    link = {
+        "source": [0, 1, 1, 1, 4, 5, 5, 6, 7, 4, 4, 4, 9, 7, 11, 11, 10],
+        "target": [1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10, 8, 1, 11, 5, 8, 8],
+        "value": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}))
+
+fig.show()
