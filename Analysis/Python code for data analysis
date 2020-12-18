@@ -2,6 +2,8 @@
 #
 #
 
+import csv
+
 """CO2 emissions"""
 #https://ccgga.org/cotton-information/much-cotton-take/
 #--> 227g of cotton for 1 t-shirt and 680g for 1 pair of jeans
@@ -49,8 +51,20 @@ print (difference_jeans)
 water_tshirt = 2700
 water_jeans = 10000
 
-#Function forecasting consumption trends of clothing
-#
+water_stshirt = 540
+water_sjeans = 2000
+
+#To create the csv file:
+
+with open('Environmental impact fast vs sustainable fashion.csv', 'w', newline= '') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Type of clothing', 'CO2 emissions', 'Water usage', 'Percentage difference'])
+    writer.writerow(['Fast fashion cotton t-shirt', emissions_rtshirt, water_rtshirt, 'N/A'])
+    writer.writerow(['Sustainable cotton t-shirt', emissions_stshirt, water_stshirt, difference_tshirt])
+    writer.writerow(['Fast fashion pair of jeans', emissions_rjeans, water_rjeans, 'N/A'])
+    writer.writerow(['Sustainable pair of jeans', emissions_sjeans, water_sjeans, difference_jeans])
+
+
 
 
 
