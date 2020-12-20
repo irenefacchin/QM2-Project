@@ -23,15 +23,15 @@ def main():
     canvas = win.canvas()
     canvas.setOutline("red")
     canvas.setFill("red")
-    canvas.drawRect(100, 150, 50, 100 / 2)
-    canvas.drawText(155, 200, "CO2 emissions")
+    canvas.drawRect(100, 150, 50, 50)
+    canvas.drawText(155, 175, "Regular tshirts' CO2 emissions")
 
     # Draw the rectangle representing the water usage
     canvas = win.canvas()
     canvas.setOutline("orange")
     canvas.setFill("orange")
-    canvas.drawRect(100, 200, 50, round(100 / 2))
-    canvas.drawText(155, 250, "Water usage")
+    canvas.drawRect(100, 200, 50, 50)
+    canvas.drawText(155, 225, "Regular tshirts' water usage")
     
     # Draw the oval representing the person's face
     canvas = win.canvas()
@@ -42,11 +42,11 @@ def main():
     # Draw the person's arms
     canvas = win.canvas()
     canvas.setOutline("pink")
-    canvas.drawLine(100, 200, 70, 70)
+    canvas.drawLine(100, 200, 50, 300)
 
     canvas = win.canvas()
     canvas.setOutline("pink")
-    canvas.drawLine(150, 200, 200, 70)
+    canvas.drawLine(150, 200, 200, 300)
 
 #To draw the sustainable tshirt
 
@@ -56,9 +56,9 @@ def main():
     canvas.setFill("white")
     canvas.drawRect(300, 150, 50, 100)
     canvas.drawText(315, 160, "-50%")
-    canvas.drawText(355, 175, "CO2 emissions saved")
+    canvas.drawText(355, 150, "CO2 emissions saved for sustainable tshirts' production")
     canvas.drawText(315, 225, "-80%")
-    canvas.drawText(355, 225, "Water saved")
+    canvas.drawText(355, 225, "Water saved for sustainable tshirts' production")
 
     # Draw the rectangle representing the CO2 emissions
     canvas = win.canvas()
