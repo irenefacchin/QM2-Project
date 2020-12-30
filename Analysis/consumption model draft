@@ -1,0 +1,62 @@
+## STEP 1: Collected data on the estimated global middle class population size (past years and predictions for future years): 
+
+(year, global middle class population (billions)*)
+(1985, 1)
+(2006, 2)
+(2015, 3.03)
+(2016, 3.2)
+(2020, 3.766)
+(2022, 4)
+(2025, 4.617)
+(2030, 5.412)
+
+*data from report Kharas 2017 (https://www.brookings.edu/wp-content/uploads/2017/02/global_20170228_global-middle-class.pdf) 
+
+##STEP 2: Plotted data and performed linear regression  to find the estimated middle class population size between the years for which we had data:
+
+Code: (https://colab.research.google.com/drive/1z5c6g_WV8W5AOQ8xNxK76uOrSK2f8BNa#scrollTo=7y09O_gNZFto) and saved on GitHub (https://github.com/irenefacchin/QM2-Project/blob/main/Analysis/(Version%202)%20Clothing_Consumption_Code.ipynb) 
+
+Wasn’t sure how to get python to generate the equation for the trendline
+Thought it would be more accurate for trendline to only be generated from data from years 2015-2030, but didn’t know how to only select this data in the code 
+→ temporarily, I used a graphing calculator to generate the trendline from the data from 2015-2030
+→ the trendline equation is: 
+estimated global middle class population (billions) = 0.158(year)-315.963	
+
+##STEP 3: Assumptions
+
+###Context:
+September 2018: “global tipping point”: “...just over 50 percent of the world’s population, or some 3.8 billion people, live in households with enough discretionary expenditure to be considered “middle class” or “rich.” About the same number of people are living in households that are poor or vulnerable to poverty.” (https://www.brookings.edu/blog/future-development/2018/09/27/a-global-tipping-point-half-the-world-is-now-middle-class-or-wealthier/) 
+Middle class definition: households with with per capita income between $11 and $110 per person per day in 2011 PPP terms (Kharas 2017) (Kharas and Hamel 2018, https://www.brookings.edu/blog/future-development/2018/09/27/a-global-tipping-point-half-the-world-is-now-middle-class-or-wealthier/) 
+Middle class: “the threshold we use in this work has the following characteristics: those in the middle class have some discretionary income that can be used to buy consumer durables like motorcycles, refrigerators, or washing machines. They can afford to go to movies or indulge in other forms of entertainment. They may take vacations. And they are reasonably confident that they and their family can weather an economic shock—like illness or a spell of unemployment—without falling back into extreme poverty.”
+“Rapid emergence of the global middle class”: ‘In the world today, about one person escapes extreme poverty every second; but five people a second are entering the middle class. The rich are growing too, but at a far smaller rate (1 person every 2 seconds)’ (Kharas 2018, https://www.brookings.edu/blog/future-development/2018/09/27/a-global-tipping-point-half-the-world-is-now-middle-class-or-wealthier/) 
+Claim: The middle class drives consumption demand: ‘Consider the structure of global economic demand. Private household consumption accounts for about half of global demand (the other half is evenly split between investment and government consumption). Two-thirds of household consumption comes from the middle class. The rich spend more per person, but are too few in number to drive the global economy. The poor and vulnerable are numerous, but have too little income to spend. For most businesses, the sweet spot to target is the middle class. This has long been true in individual advanced economies; it is now true on a global scale’ (Kharas 2018, https://www.brookings.edu/blog/future-development/2018/09/27/a-global-tipping-point-half-the-world-is-now-middle-class-or-wealthier/) 
+
+###Assumptions
+The growth of the middle class is the only driver of the increase in demand for clothing.
+→ (Somewhat) justified because “two-thirds of household consumption comes from the middle class” (Kharas 2018) and “rapid emergence of the global middle class” (“five people a second are entering the middle class”) (Kharas 2018)→ population rise of the middle class has the most impactful effect on consumption	
+The fashion industry increases clothing production directly proportional to an increase in the demand (constant ratio) -- which increases proportionally to size of global middle class population (assumption 1)
+→ will use this assumption to predict changes in demand for clothing up to 2030
+Individuals satisfy their clothing demand solely by buying cotton t-shirts and denim jeans
+→ to simplify our calculations of environmental impact of the fashion industry, we only looked at the environmental impact (water usage and CO2 emissions) from the production of a cotton t-shirt and a pair of denim jeans.
+→ we were unable to find data on how many shirts/jeans are produced yearly
+→ therefore we require this assumption to estimate how the environmental impacts of the fashion industry (t-shirts/jeans) will change as demand changes over time 
+
+##STEP 4: Found the statistic of total amount of garments produced in 2018:
+
+150 billion garments produced in 2018, 30% not sold → 105 billion sold (0.7*150 = 105) (https://sharecloth.com/blog/reports/apparel-overproduction)
+
+##STEP 5: Calculated the ratio of the total amount of garments sold to the size of the global middle class
+
+Using the trendline equation estimated global middle class population (billions) = 0.158(year)-315.963, to find the global middle class population in 2018 (year for which we have the data for the number of garments sold):
+
+0.158(2018)-315.963  3.476 billion 
+
+105 billion3.476 billion 30.207
+→ multiplying this ratio by the estimated global middle class in any year will give the estimated demand for clothing in that year (the function for consumption should be 30.207function of middle class population
+**consider that, as seen in step 4, the fashion industry produces more items than are actually sold, thus further worsening the environmental impact of the industry
+
+##Things I couldn’t figure out how to do/didn’t do:
+Wasn’t sure how to get python to generate the equation for the trendline
+Thought it would be more accurate for trendline to only be generated from data from years 2015-2030, but didn’t know how to only select this data in the code 
+Didn’t actually write out the consumption function, should do that
+Regarding this point: “consider that, as seen in step 4, the fashion industry produces more items than are actually sold, thus further worsening the environmental impact of the industry” -- would it be better, in terms of calculating environmental cost of 
