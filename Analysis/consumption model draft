@@ -60,3 +60,7 @@ Wasn’t sure how to get python to generate the equation for the trendline
 Thought it would be more accurate for trendline to only be generated from data from years 2015-2030, but didn’t know how to only select this data in the code 
 Didn’t actually write out the consumption function, should do that
 Regarding this point: “consider that, as seen in step 4, the fashion industry produces more items than are actually sold, thus further worsening the environmental impact of the industry” -- would it be better, in terms of calculating environmental cost of 
+
+#For the consumption function
+Used a web plot digitizer (Web Plot digitalizer: https://apps.automeris.io/wpd/) to create a dataset from the global middle class population plot. I then mulitplied it by the consumption coefficient in order to have a dataset for the forecasted global middle class demand for clothing.
+Once I had the dataset, I plotted a scatter plot + trendline for the demand. 
