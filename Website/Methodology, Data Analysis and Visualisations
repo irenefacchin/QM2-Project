@@ -1,0 +1,30 @@
+#PHASE 2: Investigating Demand Side
+
+##PART A: Estimating the environmental impacts of a T-Shirt and a pair of Jeans
+
+##PART B: Creating the Consumption Model
+
+###STEP 1: Collect Data
+We collected data on the estimated global middle class population size based off of calculations from Homi Kharas's 2017 report, 'The Unprecedented Expansion of the Global Middle Class, an update.' 
+CSV data file (https://raw.githubusercontent.com/irenefacchin/QM2-Project/main/Analysis/Code/MC_pop_report.csv) & Code (https://github.com/irenefacchin/QM2-Project/blob/main/Analysis/Code/Middle_Class_Population_Data_Kharas_2017.ipynb)
+
+###STEP 2: Plot data & trend-line
+We plotted the data on a scatter plot and then graphed a linear trend line to find out the estimated global middle class population size between the years for which we had data.
+
+###STEP 3: Assumptions
+1. The growth of the middle class is the only driver of the increase in demand for clothing, and this relationship is linear.
+The middle class is defined by many scholars as 'households spending $11 -110 per day per person in 2011 purchasing power parity' (Kharas, 2018). It is the fastest growing category of spending, with five people joining every second (Kharas 2018). Given the rapid growth of this class and the fact that the defined threshold of the middle class allows for spending on non-essential goods, the middle class accounts for 'two-thirds of household consumption' (Kharas, 2018). Because of this, we assume that the increasing size of the middle class is the only driver for an increase in the demand for clothing. We argue that basing our consumption model on the estimated size of the middle class population is more reasonable than basing it on the size of the global population, since the later scenario would not inform us on the spending capabilities of the individuals in the population. 
+2. The fashion industry increases clothing production directly proportionally to an increase in the demand, which increases proportionally to the size of the global middle class population (see assumption 1).
+The fashion industry produces significantly more items of clothing than are actually bought each year and therefore is arguably not maximizing its efficiency. In fact, in 2018, 30% of the 150 billion garments produced were never sold (Rudenko, 2018). Despite this, in our model we assume that the fashion industry increases the number of garments produced yearly directly proportional to the size of the global middle class. 
+3. Individuals satisfy their clothing demand solely by buying cotton t-shirts and denim jeans, with a ratio of twice as many t-shirts to jeans.
+Our final assumption is the least realistic. In Part A, we estimated the environmental impacts of producing one cotton T-shirt and the impacts of producing a pair of denim jeans. Since we were unable to find data on the amount of T-shirts and/or pairs of jeans produced annually, Assumption 3 is essential. It allows us to apply the aforementioned values of the environmental impacts of these items of clothing to the data we have on the industry-wide demand for clothing (based on the size of the middle class). The reason why we selected the ratio 'twice as many t-shirts to jeans,' because T-shirts are typically cheaper and are produced in greater variety than jeans, resulting in people typically owning more pairs of T-shirts than jeans.
+
+###STEP 4: Calculating the ratio of the total amount of garments sold to the size of the global middle class
+The 'Apparel Industry Overproduction Report and Infographic' states that in 2018 the fashion industry produced 150 billion garments, however 30% were not sold. Therefore, the estimated demand for clothing in 2018 was 105 billion (70% of 150 billion.
+According to the trend-line from Step 2, the estimated middle class population in 2018 was 3.476 billion. 
+Using this information from 2018, we are able to find the ratio of the total amount of garments sold to the size of the global middle class in a specific year:
+105 billion ÷ 3.476 billion ≈ 30.207
+
+###STEP 5: Creating the consumption model
+Thanks to Assumption 2, multiplying this ratio by the estimated global middle class population in any year will generate the value for the estimated demand for clothing in that year.
+
