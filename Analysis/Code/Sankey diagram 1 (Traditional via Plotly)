@@ -4,8 +4,8 @@ fig = go.Figure(go.Sankey(
     arrangement = "snap",
     node = {
         "label": ["0 Regular Cotton farming", "1 CO2 emissions", "2 Textile / Fabric production", "3 Pesticide", "4 Water with hazardous chemical discharge", "5 Garment Production", "6 Textile wastage", "7 Distribution & retail", "8 Consumer use","9 Unsold", "10 Landfill or Incineration", "11 Water Pollution"],
-        "x":[0.1, 0.2, 0.3, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.9],
-        "y":[0.1, 0.2, 0.3, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.9],
+        "x": [0.0, 0.2, 0.2, 0.2, 0.3, 0.4, 0.5, 0.5, 0.6, 0.9, 0.9],
+        "y": [0.2, 0.4, 0.7, 0.2, 0.5, 0.8, 0.7, 0.9, 1.0, 0.9, 0.2],
         'pad':10},  # 10 Pixels
     link = {
         "source":[0, 0, 0, 2, 2, 5, 6, 5, 7, 8, 4],
