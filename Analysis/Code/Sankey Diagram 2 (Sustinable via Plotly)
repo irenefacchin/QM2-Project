@@ -1,0 +1,17 @@
+import plotly.graph_objects as go
+
+fig = go.Figure(go.Sankey(
+    arrangement = "snap",
+    node = {
+        "label": ["0 Organic Cotton farming", '1 CO2 emissions', "2 Textile / Fabric production", "3 Pesticides", "4 Water with Natural plant dye", "5 Garment Production", "6 Distribution & retail", "7 Water Pollution", "8 Consumer use","9 Landfill or Incineration", "10 Recycled & Upcycled", "11 Textile wastage", "12 Donated", "13 Waste water recycled"],
+        "x": [0.0, 0.1, 0.2, 0.3, 0.3, 0.5, 0.6, 0.6, 1.0, 0.7, 0.35, 0.8, 0.6, 0.3, 0.4, 0.6],
+        "y": [0.2, 0.1, 0.4, 0.3, 0.5, 0.4, 0.2, 0.5, 0.8, 0.8, 0.6, 0.5, 0.1, 0.8, 0.3, 0.1],
+        'pad':10},  # 10 Pixels
+    link = {
+        "source": [0, 0, 2, 2, 5, 6, 8, 5, 11, 8, 12, 12, 4, 13, 4, 10],
+        "target": [2, 1, 4, 5, 6, 8, 9, 11, 10, 12, 6, 9, 13, 2, 7, 5],
+        "value": [100, 50, 100, 100, 88, 100, 100, 12, 100, 28, 98, 2, 3, 3, 20, 100]}))
+
+fig.update_layout(title_text="Sustainable Circular production pathway of a t-shirt </a>",
+                  font_size=10)
+fig.show()
