@@ -1,0 +1,112 @@
+Our Methods
+
+We divided the methodology into three phases which aligns with our three aims of the project:
+
+PHASE 1: Investigating Supply Side
+
+The first phase of our project was to investigate impacts of the supply side if switched to a sustainable production model. As sankey diagrams visually resemble the production flow, we chose to create two sanky diagrams using Plotly to compare the two production models:
+
+The first sankey diagram shows the traditional linear production model
+The second sankey diagram shows the sustainable circular production model.
+For environmental impacts to be comparable, we applied the basis of one t-shirt into each production model and applied data on five environmental impact indicator: (1) CO2 emissions in farming, (2) CO2 emissions in fabric production, (3) pesticide and insecticide use, (4) water usage (irrigation and dyeing combined), (5) textile waste, per t-shirt as the basis of 100%. We then compared and calculated the percentage of linear model in the circular model.
+
+Our hypothesis was:
+
+There is at least a 50% reduction in each of the five environmental impact indicator.
+
+At this stage, we realised that there is difficulty in representing different environmental indicators with different units in a diagram. We thus did not include comparable data on time to reach landfill in the sankey diagram to avoid visual misrepresentation.
+
+For traditional linear model, we acquired data on water usage (L) and pesticide (g) from Treefy; percentage of textile waste recycled from H&M; average time to reach landfill (years) from WRAP.
+
+For the sustainable circular model, we sought projections from H&M’s plan on reusing water; represented the doubled time to reach landfill by assuming one donation cycle.
+
+PHASE 2: Investigating Demand Side
+
+The second phase of our project was to investigate impacts of the demand side if switched to a sustainable production model. First of all, we compared the difference of environmental impact between fast fashion and sustainable fashion by visualising it through a drawing of an outfit. Then, we built a consumption model, in order to finally, look at the projected environmental impacts of both sustainable and fast fashion industries.
+
+Part A: Estimating the environmental impacts of a T-Shirt and a pair of Jeans
+
+STEP 1 : Coming up with the visualisation
+
+When looking into ways to represent data, we found it interesting to first create a very comprehensive visualisation of the fashion industry’s environmental impacts. When brainstorming, the idea of sketching a T-shirt and a pair of jeans came up instinctively, as they compose the main parts of an everyday outfit. We then had the idea to “fill them up” with colours corresponding to their respective environmental impacts. The fast fashion side, which represents the status quo, has the highest environmental impact and the outfit is therefore filled up to 100%. We then used the percentage differences found in the sources to compare it with the sustainable side.
+
+[Image]
+Numeric sketch of a fast fashion outfit and a sustainable outfit
+
+It started from this rough numeric sketch. At first we wanted the clothing to be sectioned in three, for the three main pollutants in the industry, CO2, Water Usage, and Chemicals. We soon came to realise that data on chemicals were too difficult to source and non compatible for a comparaison. The Chemical section was then removed. We ended up with two sections, C02 and Water Usage.
+
+
+STEP 2: Collect data
+
+We collected data from a multitude of sources, articles, and most importantly from brands we reached out to. For example Nu-In, a sustainable brand, gave us access to data from an article they released about the consumption of one Organic T-shirt. Following all our research, we decided it would be most accurate to concentrate on the most pollutant material in the fashion industry: cotton.
+
+We gathered all necessary data and wrote a Python code to create a csv table. Using Python to regroup all of the sources and numbers we needed allowed us to clean the data, clearly order the information and make calculations without errors.
+
+[Table]
+CSV Table comparing fast fashion and sustainable fashion environmental impacts
+
+Step 3: Plotting the data
+
+In order to code these outfits, we needed to learn a new Python library which would allow to create simple drawings and digital images. We decided to learn the EzGraphics library, and by drawing simple geometrical shapes and playing with different colours, we managed to draw our two outfits.
+
+Part B: Creating the Consumption Model
+
+STEP 1: Collect data
+
+We collected data on the estimated global middle class population size based off of calculations from Homi Kharas’s 2017 report, ‘The Unprecedented Expansion of the Global Middle Class, an update.’
+
+[Table]
+CSV Table showing the global middle class population growth (1985-2030)
+
+STEP 2: Plot data & Linear Regression
+
+We plotted the data on a scatter plot and then graphed a linear regression to find out the estimated global middle class population size between 1985 and 2030. However, before 2015, there were only 2 data points which didn’t seem very accurate, so we also decided to plot the linear regression for data from 2015 to 2030.
+
+[graph]
+Linear Regression of the global middle class population growth (1985-2030)
+[graph]
+Linear Regression of the global middle class population growth (2015-2030)
+
+STEP 3: Assumptions
+
+1. The growth of the middle class is the only driver of the increase in demand for clothing, and this relationship is linear.
+2. The fashion industry increases clothing production directly proportionally to an increase in the demand, which increases proportionally to the size of the global middle class population (see assumption 1).
+3. Individuals satisfy their clothing demand solely by buying cotton t-shirts and denim jeans, with a ratio of twice as many t-shirts to jeans.
+
+STEP 4: Calculating the ratio of the total amount of garments sold to the size of the global middle class
+
+The ‘Apparel Industry Overproduction Report and Infographic‘ states that in 2018 the fashion industry produced 150 billion garments, however 30% were not sold. Therefore, the estimated demand for clothing in 2018 was 105 billion (70% of 150 billion).
+
+According to the linear regression from Step 2, the estimated middle class population in 2018 was 2.881 billion. To calculate this, we decided to use the linear regression with data only from 2015-2030, since we only had two data points before 2015 and including these would have made the linear regression less accurate.
+
+(global middle class population, billions) = 0.158 (year) – 315.963
+(global middle class population, billions) = 0.158 (2018) – 315.963
+
+(global middle class population, billions) = 2.881
+
+Using this information from 2018, we are able to find the ratio of the total amount of garments sold to the size of the global middle class in a specific year:
+
+105 billion ÷ 2.881 billion ≈ 36.446
+
+STEP 5: Creating the Consumption Model
+
+Thanks to Assumption 2, multiplying this ratio by the estimated global middle class population in any year will generate the value for the estimated demand for clothing in that year.
+
+Phase 3: Projections
+
+After finishing the consumption model, we were able to complete our analysis by calculating and plotting the forecasted environmental impacts of the fast fashion and sustainable industries and compare them.
+
+In order to do this, we used the initial CSV file with the environmental impacts of a single t-shirt and pair of jeans. Thanks to assumption 3, we were able to divide the global middle class demand in 3, where 2/3 were for t-shirts and 1/3 were for jeans. We then had the demand for t-shirts and jeans for each year. We then calculated the forecasted water usage and the forecasted CO2 emissions for fast and sustainable fashion:
+
+Total Fast Fashion Water Usage = (Water Usage for a fast fashion t-shirt * Demand for t-shirts) + (Water Usage for a fast fashion pair of jeans * Demand for jeans)
+
+Total Fast Fashion CO2 Emissions = (CO2 Emissions for a fast fashion t-shirt * Demand for t-shirts) + (CO2 emissions for a fast fashion pair of jeans * Demand for jeans)
+
+Total Sustainable Fashion Water Usage = (Water Usage for a sustainable fashion t-shirt * Demand for t-shirts) + (Water Usage for a sustainable fashion pair of jeans * Demand for jeans)
+
+Total Sustainable Fashion CO2 Emissions = (CO2 Emissions for a sustainable fashion t-shirt * Demand for t-shirts) + (CO2 Emissions for a sustainable fashion pair of jeans * Demand for jeans)
+
+Having our final dataset, we were then able to code a graph representing the forecasted CO2 Emissions and Water Usage if we stick to the status quo (fast fashion), or if everyone switched to sustainable fashion this year. Finally, in order to have a clearer and more visual comparison, we calculated the percentage of CO2 Emissions and Water saved if everyone switched to sustainable (CSV File) , and we plotted a bar chart.
+
+
+
