@@ -1,0 +1,66 @@
+Data Visualisations
+Phase 1: Investigating Supply Side
+
+[html png image of diagram 1]
+Diagram 1
+Note: We attempted to embed the interactive iframe via custom html, but it only showed in preview and not when published. This is the exported png image. Link to responsive iframe with details on values accessible via Chrome: https://plotly.com/~uclqckv/1/
+
+[html png image of diagram 2]
+Diagram 2
+Note: We attempted to embed the interactive iframe via custom html, but it only showed in preview and not when published. This is the exported png image. Link to responsive iframe with details on values accessible via Chrome: https://plotly.com/~uclqckv/4/
+
+The two Sankey diagrams show the production and energy pathway of making a cotton t-shirt. Each colour box represents a stage in the production (e.g. Organic cotton faming) or an environmental impact (e.g. CO2 emissions). The number before each stage name i.e. “2” Fabric/Textile production, is the code order. When interacting with the stages, number of incoming and outgoing flows are shown, representing number of “source-to-target”. E.g. 2 Textile/Fabric production has a total of 4 flows in diagram 1: one incoming (0 to 2), three outgoing (2 to 1, 2 to 4 and 2 to 5).
+
+CO2 emissions, pesticide & insecticides and water usage (irrigation and dyeing) are set as 100% to show percentage of Diagram 1 in used in Diagram 2. E.g. Water usage in Diagram 2 is 9% of that in Diagram 1; within this 9%, 15% is recycled and remaining are biodegradable non-pollutant.
+
+From comparing the two diagrams, we concluded that a sustainable circular model:
+
+produces 69% less CO2 emissions from farming and 15% less from fabric production, giving an overall ~60% less CO2 emissions
+uses 100% less / no pesticide & insecticides due to organic cotton farming
+uses 91% less water due to rain-fed organic cotton farming
+uses natural dye that is biodegradable, thus causes 100% less / no water pollution
+has the same textile wastage as linear model (12%), however 100% recycled
+has an additional pathway of ‘Donated or Recycled’ that prolongs time for, and even potentially prevents, t-shirt to reach landfill
+
+Phase 2: Investigating Demand Side
+PART A: Estimating Environmental Impact of a T-shirt and a pair of Jeans
+
+[image]
+EzGraphics digital drawing of a fast fashion and a sustainable outfit with their respective environmental impacts
+
+Code for t-shirt & Code for pair of jeans
+
+To draw these two outfits, we used the Python EzGraphics library. The top left corner of the canvas is the (0,0) coordinate. To represent the t-shirt, we drew two squares for the sleeves, and one rectangle for the middle part. For the pair of jeans, we drew two rectangles for the legs, and two squares for the middle part.
+
+This representation allows to easily visualise the difference in environmental impact between a fast fashion and a sustainable outfit. In the sustainable outfit, the CO2 Emissions (corresponding to the red parts) have decreased by 50%, and 80% of the water is saved. With this visualisation, we can clearly see that a sustainable outfit has a minimised environmental impact.
+
+PART B: Creating Consumption Model
+
+[image]
+Linear Regression of the projected demand for clothing (2015-2030)
+
+CSV file & Code
+
+This visualisation represents our estimate of the yearly demand for clothing from 2015 to 2030. 
+
+As explained in the methods section, we derived the value of demand at any given year based on a linear regression we created estimating the size of the global middle class population. We used data on the estimated global middle class population for the years: 2015, 2016, 2020, 2022, 2025 and 2030 — all the years in between are estimated using the linear regression based on these data points. In 2018, the estimated middle class population was 3.652 billion, and 105 billion items of clothing were sold (Rudenko, 2018). Based on the ratio of the middle class population to clothing demand, we created this consumption model estimating how much demand would increase each year as the size of the middle class population increases.
+
+In just 15 years, the demand for clothing is estimated to increase by a staggering 71%, with approximately 154 billion items of clothing being bought at the end of the decade. According to the linear regression, we expect to observe the demand for clothing increase by 4.545 billion additional garments sold every year. 
+
+However, the accuracy of this model’s conclusions is limited. Assumption 1 — that there is a linear relationship between the global middle class size and clothing demand — allowed us to forecast consumer demand for clothing using the only data point we found for the amount of clothing sold in 2018. We believe that this assumption is somewhat reasonable since we imagine that individuals within the threshold of the ‘middle class’ would have similar budgets to spend on clothing. However, extrapolating from a single data point is not ideal, and doing so has hindered the probability of this model accurately forecasting future demand for clothing. 
+
+Phase 3: Projections
+Cumulative CO2 emissions forecast: Fast Fashion vs Sustainable Fashion
+[image]
+
+Cumulative Water Usage Forecast: Fast Fashion vs Sustainable Fashion
+[image]
+
+CSV file & Code
+
+These two linear graphs show the cumulative water usage and CO2 Emissions forecast for both the fast fashion and the sustainable fashion industries. The green line, which represents the sustainable fashion industry’s environmental impact increases slowly in both graphs. In almost 10 years, cumulative water usage only increases by 15% while staying below the 2.0e+15L mark, and CO2 Emissions don’t exceed 500e+09kg. The fast fashion industry (represented by the red line), on the other hand, shows that if we stick to the status quo, both CO2 Emissions and Water Usage would skyrocket. To have a clearer view of the difference between the fast fashion and the sustainable fashion forecast environmental impact, we also plotted a bar chart. 
+
+[image]
+Bar chart representing the saved CO2 Emissions and Water if the fashion industry switches to sustainable fashion in 2021
+
+This bar chart concludes our research by visualising the cumulative difference in environmental impact if the fashion industry switched to sustainable fashion. Initially, we tried to code the bar chart on Python (Code) but we had some problems with the y-axis units. As we didn’t want to mislead anyone and we wanted our visualisation to be as transparent and clear as possible, we finally decided to make this visualisation through Microsoft Excel, using our CSV File. As CO2 Emissions and Water would be saved if we switch to sustainable fashion, the percentages are negative, leading to an “upside down” chart. Looking at this chart, we can see that in 10 years time, if the fashion industry switches to sustainable fashion immediately, more than 70% of water could be saved, and 41% of CO2 emissions could be avoided.
