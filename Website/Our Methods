@@ -14,11 +14,13 @@ Our hypothesis was:
 
 There is at least a 50% reduction in each of the five environmental impact indicator.
 
-At this stage, we realised that there is difficulty in representing different environmental indicators with different units in a diagram. We thus did not include comparable data on time to reach landfill in the sankey diagram to avoid visual misrepresentation.
+At this stage, we realised that there is difficulty in representing different environmental impacts with different units in a diagram. We thus did not include comparable data on time to reach landfill in the sankey diagram to avoid visual misrepresentation. To convert the units of data points to percentages, we set Diagram 1 data = 100% and used (Diagram 2 data ÷ Diagram 1 data) x 100%.
 
-For traditional linear model, we acquired data on water usage (L) and pesticide (g) from Treefy; percentage of textile waste recycled from H&M; average time to reach landfill (years) from WRAP.
+E.g. Water usage: Traditional model uses 2700L, Sustainable model uses 243L
+Value in Diagram 1 = 100%
+Value in Diagram 2 = (243 ÷ 2700) x 100% = 9%
 
-For the sustainable circular model, we sought projections from H&M’s plan on reusing water; represented the doubled time to reach landfill by assuming one donation cycle.
+For traditional linear model, we acquired data on water usage (L) and pesticide (g) from Treefy; percentage of textile waste recycled from H&M; average time to reach landfill (years) from WRAP. For the sustainable circular model, we sought projections from H&M’s plan on reusing water; represented the doubled time to reach landfill by assuming one donation cycle. We then calculated the percentage change and combined the data points into a CSV file.
 
 PHASE 2: Investigating Demand Side
 
